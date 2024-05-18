@@ -1,0 +1,122 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    img {
+        width: 65px;
+    }
+
+    p {
+        font-size: 4.6rem;
+        font-weight: 700;
+        margin: 0;
+    }
+}
+
+.footer-link {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+
+    li {
+        cursor: pointer;
+
+        &:hover {
+            color: rgb(0, 106, 194);
+        }
+    }
+}
+
+.footer-social-icon {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #ff4141, #d141ff);
+    border: 1px solid #efefef;
+    border-radius: 4px;
+    color: rgb(40, 40, 40);
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: #fbfbfb;
+        width: 180%;
+        height: 100%;
+        top: 0;
+        left: -30%;
+        z-index: 0;
+        transform: skew(30deg);
+        transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+    }
+
+    svg {
+        position: relative;
+        z-index: 10;
+    }
+
+    &:hover::before {
+        transform: translate3d(100%, 0, 0);
+    }
+    &:hover {
+        svg {
+            color: #fff;
+        }
+    }
+}
+
+.footer-copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+    font-size: 1.8rem;
+
+    hr {
+        width: 80%;
+        height: 3px;
+        background-color: black;
+    }
+
+    div {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        padding-bottom: 24px;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    span {
+        font-weight: 700;
+    }
+
+    .footer-copyright-line {
+        height: 1.6rem;
+        width: 1px;
+        background-color: black;
+    }
+}
