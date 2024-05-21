@@ -37,15 +37,22 @@
 .item-content-price {
     font-size: 1.8rem;
     display: flex;
-    gap: 20px;
+    align-items: flex-end;
+    gap: 10px;
     font-weight: 600;
+    margin-top: 8px;
 
     p {
         margin: 0;
     }
 }
 
+.item-content-price-new {
+    color: var(--primary-color);
+}
+
 .item-content-price-old {
     text-decoration: line-through;
     color: #8c8c8c;
+    font-size: 1.6rem;
 }

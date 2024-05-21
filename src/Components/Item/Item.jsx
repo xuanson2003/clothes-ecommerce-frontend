@@ -19,6 +19,7 @@ function Item({ data }) {
                     <h3 className="item-content-name">{data.name}</h3>
                     <div className="item-content-price">
                         <p className="item-content-price-new">{data.new_price.toLocaleString('vi-VN')} ₫</p>
+                        <p className="item-content-price-old">{data.old_price.toLocaleString('vi-VN')} ₫</p>
                     </div>
                 </div>
             </div>
