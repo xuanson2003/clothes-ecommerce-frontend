@@ -1,0 +1,138 @@
+.product-display {
+    display: flex;
+    gap: 32px;
+}
+
+.product-display-left {
+    display: flex;
+    gap: 16px;
+}
+
+.product-display-img-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    img {
+        width: 100px;
+    }
+}
+
+.product-display-img-main {
+    img {
+        width: 440px;
+    }
+}
+
+.product-display-right {
+    flex: 1;
+
+    button {
+        padding: 12px 24px;
+        background-color: var(--primary-color);
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: 600;
+        text-transform: capitalize;
+        min-width: 160px;
+        border-radius: 1px;
+    }
+}
+
+.product-display-right-name {
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.product-display-right-rate {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 8px;
+
+    img {
+        width: 18px;
+        height: 17px;
+    }
+
+    p {
+        margin: 0 0 0 4px;
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+}
+
+.product-display-right-price {
+    display: flex;
+    gap: 28px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin: 24px 0;
+    color: var(--primary-color);
+
+    .product-display-right-price-old {
+        text-decoration: line-through;
+        color: #8c8c8c;
+    }
+}
+
+.product-display-right-description {
+    font-size: 1.6rem;
+    margin: 0;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    max-height: 72px;
+}
+
+.product-display-right-size {
+    h2 {
+        font-size: 2rem;
+        color: #656565;
+        font-weight: 600;
+        margin-top: 24px;
+    }
+
+    .product-display-right-sizes {
+        display: flex;
+        gap: 16px;
+        margin: 20px 0;
+
+        div {
+            font-size: 1.6rem;
+            font-weight: 500;
+            background-color: #fbfbfb;
+            border: 1px solid #ebebeb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 50px;
+            cursor: pointer;
+
+            &:hover {
+                border: 2px solid #656565;
+            }
+        }
+    }
+}
+
+.product-display-right-category {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    gap: 6px;
+
+    p {
+        margin: 0;
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+    span {
+        font-weight: 700;
+    }
+}

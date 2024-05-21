@@ -3,6 +3,7 @@ import Cart from '~/Pages/Cart';
 import Home from '~/Pages/Home';
 import Login from '~/Pages/Login';
 import ProductCategory from '~/Pages/ProductCategory';
+import ProductDetail from '~/Pages/ProductDetail';
 import SignUp from '~/Pages/SignUp';
 
 const publicRoutes = [
@@ -10,7 +11,7 @@ const publicRoutes = [
     { path: config.routes.men, component: <ProductCategory category="men" /> },
     { path: config.routes.women, component: <ProductCategory category="women" /> },
     { path: config.routes.kid, component: <ProductCategory category="kid" /> },
-    { path: config.routes.productDetail, component: <productDetail /> },
+    { path: config.routes.productDetail, component: <ProductDetail /> },
     { path: config.routes.login, component: <Login /> },
     { path: config.routes.signup, component: <SignUp /> },
     { path: config.routes.cart, component: <Cart /> },

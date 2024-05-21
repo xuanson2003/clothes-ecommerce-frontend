@@ -12,7 +12,7 @@ function App() {
                 <Header />
                 <Routes>
                     {publicRoutes.map((item, index) => (
-                        <Route path={item.path} element={item.component} />
+                        <Route key={index} path={item.path} element={item.component} />
                     ))}
                 </Routes>
                 <Footer />
