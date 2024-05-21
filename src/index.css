@@ -30,6 +30,10 @@ button {
     border: none;
 }
 
+p {
+    margin: 0;
+}
+
 code {
     font-family: 'Montserrat', sans-serif;
 }

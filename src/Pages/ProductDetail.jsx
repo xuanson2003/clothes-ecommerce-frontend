@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import all_product from '~/Assets/Images/all_product';
 import Breadcrum from '~/Components/BreadScrum/Breadcrum';
+import DescriptionBox from '~/Components/DescriptionBox/DescriptionBox';
 import ProductDisplay from '~/Components/ProductDisplay/ProductDisplay';
 
 const ProductDetail = () => {
@@ -12,6 +13,7 @@ const ProductDetail = () => {
             <div className="container">
                 <Breadcrum product={product} />
                 <ProductDisplay product={product} />
+                <DescriptionBox />
             </div>
         </div>
     );

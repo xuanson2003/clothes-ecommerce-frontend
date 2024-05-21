@@ -1,0 +1,36 @@
+.description-box {
+    margin: 80px 0;
+    color: black;
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.description-box-navigator {
+    display: flex;
+}
+
+.description-box-nav-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 132px;
+    height: 56px;
+    border: 1px solid #d0d0d0;
+    padding: 0 16px;
+    font-weight: 700;
+    background-color: #fbfbfb;
+    color: #555;
+
+    &.active {
+        background-color: #fff;
+        color: black;
+    }
+}
+
+.description-box-content {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: 1px solid #d0d0d0;
+}
