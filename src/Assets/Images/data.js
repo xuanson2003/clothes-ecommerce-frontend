@@ -9,28 +9,28 @@ let data_product = [
         name: 'Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse Collar Peplum Hem Blouse',
         image: p1_img,
         new_price: 2000000,
-        old_price: 80.5,
+        old_price: 2200000,
     },
     {
         id: 2,
         name: 'Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse',
         image: p2_img,
         new_price: 100000,
-        old_price: 120.5,
+        old_price: 120000,
     },
     {
         id: 3,
         name: 'Striped Flutter Sleeve Overlap',
         image: p3_img,
         new_price: 60000,
-        old_price: 100.5,
+        old_price: 100000,
     },
     {
         id: 4,
         name: 'Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse',
         image: p4_img,
         new_price: 185000,
-        old_price: 150.0,
+        old_price: 230000,
     },
 ];
 
