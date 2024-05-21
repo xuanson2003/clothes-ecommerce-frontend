@@ -1,22 +1,32 @@
 import React from 'react';
-import './Popular.scss';
-import data from '~/Assets/Images/data';
-import Item from '../Item/Item';
+import PropTypes from 'prop-types';
 
-const Popular = () => {
+import './Popular.scss';
+import Item from '../Item/Item';
+import data from '~/Assets/Images/all_product';
+
+const Popular = ({ title, category }) => {
     return (
         <div className="popular">
             <div className="container popular-container">
-                <h2>Thời trang nữ phổ biến</h2>
+                <h2>{title}</h2>
                 <hr />
                 <div className="popular-list row">
-                    {data.map((item) => (
-                        <Item key={item.id} data={item} />
-                    ))}
+                    {data
+                        .filter((item) => item.category === category)
+                        .slice(-5, -1)
+                        .map((item) => (
+                            <Item key={item.id} data={item} />
+                        ))}
                 </div>
             </div>
         </div>
     );
+};
+
+Popular.propTypes = {
+    title: PropTypes.string,
+    category: PropTypes.string,
 };
 
 export default Popular;

@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div>
             <Hero />
-            <Popular />
+            <Popular title="Thời trang nữ phổ biến" category="women" />
             <Offers />
             <NewCollections />
             <NewsLetter />
