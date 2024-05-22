@@ -10,14 +10,21 @@ import ProductDisplay from '~/Components/ProductDisplay/ProductDisplay';
 
 const ProductDetail = () => {
     const { id } = useParams();
+    const titles = {
+        men: 'Thời trang nam phổ biến',
+        women: 'Thời trang nữ phổ biến',
+        kid: 'Thời trang trẻ em phổ biến',
+    };
     const product = all_product.find((item) => item.id === Number(id));
+    const title = titles[product.category] || titles.men;
+
     return (
         <div className="product-detail">
             <div className="container">
                 <Breadcrum product={product} />
                 <ProductDisplay product={product} />
                 <DescriptionBox />
-                <Popular title="Thời trang nam phổ biến" category="men" />
+                <Popular title={title} category={product.category} />
             </div>
         </div>
     );

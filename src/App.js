@@ -9,13 +9,26 @@ function App() {
     return (
         <div>
             <BrowserRouter>
-                <Header />
                 <Routes>
-                    {publicRoutes.map((item, index) => (
-                        <Route key={index} path={item.path} element={item.component} />
-                    ))}
+                    {publicRoutes.map((item, index) => {
+                        if (item.layout === null) {
+                            return <Route key={index} path={item.path} element={item.component} />;
+                        }
+                        return (
+                            <Route
+                                key={index}
+                                path={item.path}
+                                element={
+                                    <>
+                                        <Header />
+                                        {item.component}
+                                        <Footer />
+                                    </>
+                                }
+                            />
+                        );
+                    })}
                 </Routes>
-                <Footer />
             </BrowserRouter>
         </div>
     );
