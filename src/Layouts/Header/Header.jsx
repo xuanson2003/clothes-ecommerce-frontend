@@ -50,9 +50,20 @@ const Header = () => {
                     </li>
                 </ul>
                 <div className="header-login-cart">
-                    <Link to={config.routes.login}>
-                        <button>Đăng nhập</button>
-                    </Link>
+                    {localStorage.getItem('auth-token') ? (
+                        <button
+                            onClick={() => {
+                                localStorage.removeItem('auth-token');
+                                window.location.replace('/');
+                            }}
+                        >
+                            Đăng xuất
+                        </button>
+                    ) : (
+                        <Link to={config.routes.login}>
+                            <button>Đăng nhập</button>
+                        </Link>
+                    )}
                     <div className="header-login-cart-item">
                         <Link to={config.routes.cart}>
                             <img src={cart_icon} alt="" />
