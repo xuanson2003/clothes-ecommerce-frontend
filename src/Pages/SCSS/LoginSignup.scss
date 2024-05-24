@@ -16,7 +16,8 @@
     }
 }
 
-.login-form {
+.login-container,
+.sign-container {
     background-color: #fff;
     padding: 24px;
     border-radius: 4px;
@@ -24,6 +25,14 @@
     flex-direction: column;
     align-items: center;
     width: 400px;
+}
+
+.login-form,
+.sign-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     h2 {
         font-weight: 700;
@@ -44,7 +53,7 @@
 
     input {
         width: 100%;
-        border-radius: 4px;
+        border-radius: 2px;
         outline: none;
         padding: 11px 14px;
         border: 1px solid #c9c9c9;
@@ -99,7 +108,7 @@
     font-weight: 600;
     color: #fff;
     background-color: var(--primary-color);
-    border-radius: 4px;
+    border-radius: 2px;
 }
 
 .login-form-register-link {
@@ -138,6 +147,7 @@
     height: 48px;
     font-size: 1.6rem;
     font-weight: 500;
+    border-radius: 2px;
 
     &:active {
         background-color: #f2f2f2;
