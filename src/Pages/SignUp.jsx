@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './SCSS/LoginSignup.scss';
 import config from '~/Config';
 import request from '~/Utils/httpRequest';
+import storage from '~/Utils/storage';
 
 const SignUp = () => {
     const [passwordVisible, setPasswordVisible] = useState(false);
@@ -37,7 +38,7 @@ const SignUp = () => {
                 const responseData = response.data;
 
                 if (responseData.success) {
-                    localStorage.setItem('auth-token', responseData.token);
+                    storage.set(responseData.token);
                     window.location.replace('/');
                 } else if (responseData.errorField === 'email') {
                     setErrors({ email: 'Email này đã được đăng ký' });

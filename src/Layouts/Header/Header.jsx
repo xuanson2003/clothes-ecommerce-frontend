@@ -4,6 +4,7 @@ import './Header.scss';
 import logo from '~/Assets/Images/logo.png';
 import cart_icon from '~/Assets/Images/cart_icon.png';
 import config from '~/Config';
+import storage from '~/Utils/storage';
 
 const Header = () => {
     const [menu, setMenu] = useState('home');
@@ -50,10 +51,10 @@ const Header = () => {
                     </li>
                 </ul>
                 <div className="header-login-cart">
-                    {localStorage.getItem('auth-token') ? (
+                    {storage.get() ? (
                         <button
                             onClick={() => {
-                                localStorage.removeItem('auth-token');
+                                storage.remove();
                                 window.location.replace('/');
                             }}
                         >

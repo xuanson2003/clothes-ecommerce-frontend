@@ -8,6 +8,7 @@ import './SCSS/LoginSignup.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-regular-svg-icons';
 import request from '~/Utils/httpRequest';
+import storage from '~/Utils/storage';
 
 const Login = () => {
     const [passwordVisible, setPasswordVisible] = useState(false);
@@ -28,8 +29,8 @@ const Login = () => {
                 const responseData = response.data;
 
                 if (responseData.success) {
-                    localStorage.setItem('auth-token', responseData.token);
-                    // window.location.replace('/');
+                    storage.set(responseData.token);
+                    window.location.replace('/');
                 } else {
                     if (responseData.errorField === 'email') {
                         setErrors({ email: 'Email này chưa được đăng ký' });
