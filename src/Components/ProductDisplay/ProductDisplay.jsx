@@ -6,20 +6,22 @@ import './ProductDisplay.scss';
 import star_dull from '~/Assets/Images/star_dull_icon.png';
 import star from '~/Assets/Images/star_icon.png';
 import storage from '~/Utils/storage';
+import error_img from '~/Assets/Images/error_img.png';
 
 function ProductDisplay({ product }) {
     const { addToCart } = useContext(ShopContext);
+    const imgSrc = product.image ? product.image : error_img;
     return (
         <div className="product-display">
             <div className="product-display-left">
                 <div className="product-display-img-list">
-                    <img src={product.image} alt="" />
-                    <img src={product.image} alt="" />
-                    <img src={product.image} alt="" />
-                    <img src={product.image} alt="" />
+                    <img src={imgSrc} alt="" />
+                    <img src={imgSrc} alt="" />
+                    <img src={imgSrc} alt="" />
+                    <img src={imgSrc} alt="" />
                 </div>
                 <div className="product-display-img-main">
-                    <img src={product.image} alt="" />
+                    <img src={imgSrc} alt="" />
                 </div>
             </div>
             <div className="product-display-right">

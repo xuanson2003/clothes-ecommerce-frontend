@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-regular-svg-icons';
 import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { ShopContext } from '~/Context/ShopContext';
+import error_img from '~/Assets/Images/error_img.png';
 
 const CartItems = () => {
     const { allProduct, cartItems, removeFromCart, addToCart, removeOneItem } = useContext(ShopContext);
@@ -26,7 +27,7 @@ const CartItems = () => {
                             return (
                                 <tr key={item._id}>
                                     <td className="cart-items-img">
-                                        <img src={item.image} alt="" />
+                                        <img src={item.image ? item.image : error_img} alt="" />
                                     </td>
                                     <td className="cart-items-name">{item.name}</td>
                                     <td className="cart-items-price">
