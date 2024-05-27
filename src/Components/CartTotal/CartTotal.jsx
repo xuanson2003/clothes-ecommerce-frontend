@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './CartTotal.scss';
+import { ShopContext } from '~/Context/ShopContext';
 
 const CartTotal = () => {
+    const { getTotalCartAmount } = useContext(ShopContext);
+    const total = getTotalCartAmount();
     return (
         <div className="cart-total">
             <div className="cart-total-main">
@@ -10,7 +13,7 @@ const CartTotal = () => {
 
                     <div className="cart-total-main-item">
                         <p>Tổng phụ</p>
-                        <p>100.000 ₫</p>
+                        <p>{total.toLocaleString('vi-VN')} ₫</p>
                     </div>
                     <hr />
                     <div className="cart-total-main-item">
@@ -20,7 +23,7 @@ const CartTotal = () => {
                     <hr />
                     <div className="cart-total-main-item">
                         <h3>Tổng tiền</h3>
-                        <h3>100.000 ₫</h3>
+                        <h3>{total.toLocaleString('vi-VN')} ₫</h3>
                     </div>
 
                     <button>Thanh toán</button>

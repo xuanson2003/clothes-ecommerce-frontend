@@ -12,7 +12,7 @@ function Item({ data }) {
     return (
         <div className="item col-lg-3 col-md-3">
             <div className="item-container">
-                <Link to={`/product/${data.id}`} className="item-img" onClick={window.scrollTo(0, 0)}>
+                <Link to={`/product/${data._id}`} className="item-img" onClick={window.scrollTo(0, 0)}>
                     <img src={data.image ? data.image : error_img} alt="" />
                 </Link>
                 <div className="item-content">

@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
+import { ShopContext } from '~/Context/ShopContext';
 import './ProductDisplay.scss';
 import star_dull from '~/Assets/Images/star_dull_icon.png';
 import star from '~/Assets/Images/star_icon.png';
-
-ProductDisplay.propTypes = {
-    product: PropTypes.object,
-};
+import storage from '~/Utils/storage';
 
 function ProductDisplay({ product }) {
+    const { addToCart } = useContext(ShopContext);
     return (
         <div className="product-display">
             <div className="product-display-left">
@@ -56,7 +55,17 @@ function ProductDisplay({ product }) {
                         <div>XXL</div>
                     </div>
                 </div>
-                <button>Thêm vào giỏ hàng</button>
+                <button
+                    onClick={() => {
+                        if (!storage.get()) {
+                            alert('Vui lòng hãy đăng nhập!');
+                            return;
+                        }
+                        addToCart(product._id);
+                    }}
+                >
+                    Thêm vào giỏ hàng
+                </button>
                 <div className="product-display-right-category">
                     <p>
                         <span>Loại: </span>phụ nữ
@@ -69,5 +78,9 @@ function ProductDisplay({ product }) {
         </div>
     );
 }
+
+ProductDisplay.propTypes = {
+    product: PropTypes.object,
+};
 
 export default ProductDisplay;

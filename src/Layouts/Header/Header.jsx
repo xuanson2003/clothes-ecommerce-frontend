@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { ShopContext } from '~/Context/ShopContext';
 import './Header.scss';
 import logo from '~/Assets/Images/logo.png';
 import cart_icon from '~/Assets/Images/cart_icon.png';
@@ -8,6 +9,7 @@ import storage from '~/Utils/storage';
 
 const Header = () => {
     const [menu, setMenu] = useState('home');
+    const { getTotalCartItems } = useContext(ShopContext);
 
     return (
         <div className="header">
@@ -69,7 +71,7 @@ const Header = () => {
                         <Link to={config.routes.cart}>
                             <img src={cart_icon} alt="" />
                         </Link>
-                        <p className="header-login-cart-count">0</p>
+                        <p className="header-login-cart-count">{getTotalCartItems()}</p>
                     </div>
                 </div>
             </div>
