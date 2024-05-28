@@ -26,3 +26,26 @@
 .new-collections-list {
     margin-top: 28px;
 }
+
+@media (max-width: 1200px) {
+    .new-collections-container {
+        h2 {
+            font-size: 4rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .new-collections-container {
+        h2 {
+            font-size: 3rem;
+        }
+        hr {
+            width: 160px;
+            height: 2px;
+        }
+    }
+    .new-collections-list {
+        margin-top: 16px;
+    }
+}

@@ -10,7 +10,7 @@ Item.propTypes = {
 
 function Item({ data }) {
     return (
-        <div className="item col-lg-3 col-md-3">
+        <div className="item col-lg-3 col-md-4 col-6 ">
             <div className="item-container">
                 <Link to={`/product/${data._id}`} className="item-img" onClick={window.scrollTo(0, 0)}>
                     <img src={data.image ? data.image : error_img} alt="" />

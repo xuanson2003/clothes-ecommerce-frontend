@@ -58,3 +58,84 @@
         height: 100%;
     }
 }
+
+@media (max-width: 1200px) {
+    .offers-container {
+        padding: 0 80px;
+    }
+
+    .offers-container-left {
+        h2 {
+            font-size: 4.6rem;
+        }
+
+        p {
+            font-size: 2rem;
+        }
+
+        button {
+            font-size: 1.8rem;
+            width: 220px;
+            height: 56px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .offers {
+        height: 320px;
+    }
+    .offers-container {
+        padding: 0 36px;
+    }
+
+    .offers-container-left {
+        h2 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.6rem;
+        }
+
+        button {
+            font-size: 1.6rem;
+            width: 180px;
+            height: 46px;
+        }
+    }
+
+    .offers-container-right {
+        img {
+            width: 200px;
+            height: auto;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .offers {
+        height: 300px;
+    }
+    .offers-container-left {
+        h2 {
+            font-size: 2.4rem;
+        }
+
+        p {
+            font-size: 1.4rem;
+        }
+
+        button {
+            font-size: 1.4rem;
+            width: 160px;
+            height: 42px;
+        }
+    }
+
+    .offers-container-right {
+        img {
+            width: 180px;
+        }
+    }
+}

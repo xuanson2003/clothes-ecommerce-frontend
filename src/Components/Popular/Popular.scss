@@ -9,9 +9,10 @@
     gap: 10px;
 
     h2 {
-        font-size: 46px;
+        font-size: 4.6rem;
         font-weight: 600;
         text-transform: uppercase;
+        text-align: center;
     }
 
     hr {
@@ -26,4 +27,27 @@
 .popular-list {
     margin-top: 28px;
     width: 100%;
+}
+
+@media (max-width: 1200px) {
+    .popular-container {
+        h2 {
+            font-size: 4rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .popular-container {
+        h2 {
+            font-size: 3rem;
+        }
+        hr {
+            width: 160px;
+            height: 2px;
+        }
+    }
+    .popular-list {
+        margin-top: 16px;
+    }
 }

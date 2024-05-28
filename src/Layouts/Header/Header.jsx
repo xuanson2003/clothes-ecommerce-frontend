@@ -21,10 +21,16 @@ const Header = () => {
     return (
         <div className="header">
             <div className="container header-container">
-                <div className="header-logo">
+                <Link
+                    onClick={() => {
+                        setMenu('home');
+                    }}
+                    to={config.routes.home}
+                    className="header-logo"
+                >
                     <img src={logo} alt="" />
                     <p>SHOPPER</p>
-                </div>
+                </Link>
                 <img className="header-dropdown" src={dropdown_icon} onClick={dropdownToggle} alt="" />
                 <ul ref={menuRef} className="header-menu">
                     <li
