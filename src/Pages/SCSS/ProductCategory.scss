@@ -63,3 +63,29 @@
         }
     }
 }
+
+@media (max-width: 758px) {
+    .product-category-container-indexSort {
+        padding: 24px 0 8px;
+
+        p {
+            font-size: 1.6rem;
+        }
+    }
+
+    .product-category-container-indexSort-sort {
+        select {
+            font-size: 1.4rem;
+        }
+
+        option {
+            font-size: 1.4rem;
+        }
+    }
+
+    .product-category-container-loadmore {
+        button {
+            padding: 12px 32px;
+        }
+    }
+}

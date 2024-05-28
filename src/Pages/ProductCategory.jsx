@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-
 import { ShopContext } from '~/Context/ShopContext';
+
 import Item from '~/Components/Item/Item';
 import './SCSS/ProductCategory.scss';
 import banner_men from '~/Assets/Images/banner_mens.png';

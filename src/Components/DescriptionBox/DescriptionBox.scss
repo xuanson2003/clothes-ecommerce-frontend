@@ -20,6 +20,7 @@
     font-weight: 700;
     background-color: #fbfbfb;
     color: #555;
+    cursor: pointer;
 
     &.active {
         background-color: #fff;
@@ -33,4 +34,20 @@
     flex-direction: column;
     gap: 24px;
     border: 1px solid #d0d0d0;
+}
+
+@media (max-width: 768px) {
+    .description-box {
+        font-size: 1.4rem;
+    }
+
+    .description-box-nav-box {
+        min-width: 132px;
+        height: 56px;
+        padding: 0 16px;
+    }
+
+    .description-box-content {
+        gap: 24px;
+    }
 }

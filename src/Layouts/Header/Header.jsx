@@ -12,10 +12,11 @@ const Header = () => {
     const [menu, setMenu] = useState('home');
     const { getTotalCartItems } = useContext(ShopContext);
     const menuRef = useRef();
+    const toggleRef = useRef();
 
-    const dropdownToggle = (e) => {
+    const dropdownToggle = () => {
         menuRef.current.classList.toggle('header-menu-visible');
-        e.target.classList.toggle('open');
+        toggleRef.current.classList.toggle('open');
     };
 
     return (
@@ -31,7 +32,7 @@ const Header = () => {
                     <img src={logo} alt="" />
                     <p>SHOPPER</p>
                 </Link>
-                <img className="header-dropdown" src={dropdown_icon} onClick={dropdownToggle} alt="" />
+                <img ref={toggleRef} className="header-dropdown" src={dropdown_icon} onClick={dropdownToggle} alt="" />
                 <ul ref={menuRef} className="header-menu">
                     <li
                         onClick={() => {

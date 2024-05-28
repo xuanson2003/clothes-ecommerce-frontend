@@ -11,6 +11,12 @@ import error_img from '~/Assets/Images/error_img.png';
 function ProductDisplay({ product }) {
     const { addToCart } = useContext(ShopContext);
     const imgSrc = product.image ? product.image : error_img;
+    const categoryLst = {
+        men: 'Nam',
+        women: 'Nữ',
+        kid: 'Trẻ em',
+    };
+
     return (
         <div className="product-display">
             <div className="product-display-left">
@@ -70,7 +76,8 @@ function ProductDisplay({ product }) {
                 </button>
                 <div className="product-display-right-category">
                     <p>
-                        <span>Loại: </span>phụ nữ
+                        <span>Loại: </span>
+                        {categoryLst[product.category]}
                     </p>
                     <p>
                         <span>Thẻ: </span>hiện đại, hàng mới
