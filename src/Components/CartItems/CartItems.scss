@@ -20,7 +20,6 @@
         tbody {
             tr {
                 height: 116px;
-                padding: 16px 0;
                 border-bottom: 1px solid #ccc;
 
                 &:hover {
@@ -87,5 +86,41 @@
     button {
         background-color: transparent;
         padding: 8px 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cart-items {
+        margin-top: 48px;
+
+        table {
+            font-size: 1.3rem;
+
+            thead {
+                tr {
+                    height: 55px;
+
+                    th {
+                        padding: 0 8px;
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    td {
+                        height: 84px;
+                        padding: 0 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    .cart-items-quantity {
+        text-align: center;
+        input {
+            border: 1px solid #ccc;
+        }
     }
 }
