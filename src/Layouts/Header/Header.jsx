@@ -1,15 +1,22 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ShopContext } from '~/Context/ShopContext';
 import './Header.scss';
 import logo from '~/Assets/Images/logo.png';
 import cart_icon from '~/Assets/Images/cart_icon.png';
+import dropdown_icon from '~/Assets/Images/nav-dropdown.png';
 import config from '~/Config';
 import storage from '~/Utils/storage';
 
 const Header = () => {
     const [menu, setMenu] = useState('home');
     const { getTotalCartItems } = useContext(ShopContext);
+    const menuRef = useRef();
+
+    const dropdownToggle = (e) => {
+        menuRef.current.classList.toggle('header-menu-visible');
+        e.target.classList.toggle('open');
+    };
 
     return (
         <div className="header">
@@ -18,7 +25,8 @@ const Header = () => {
                     <img src={logo} alt="" />
                     <p>SHOPPER</p>
                 </div>
-                <ul className="header-menu">
+                <img className="header-dropdown" src={dropdown_icon} onClick={dropdownToggle} alt="" />
+                <ul ref={menuRef} className="header-menu">
                     <li
                         onClick={() => {
                             setMenu('home');

@@ -26,6 +26,10 @@
     }
 }
 
+.header-dropdown {
+    display: none;
+}
+
 .header-menu {
     display: flex;
     align-items: center;
@@ -110,5 +114,118 @@
     }
     to {
         width: 80%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .header-logo {
+        img {
+            width: 40px;
+        }
+
+        p {
+            font-size: 2.4rem;
+        }
+    }
+
+    .header-menu {
+        gap: 24px;
+
+        li {
+            a {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    .header-login-cart {
+        gap: 30px;
+
+        button {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .header-dropdown {
+        display: block;
+        width: 30px;
+        height: 30px;
+        rotate: -180deg;
+        transition: 0.3s;
+
+        &.open {
+            rotate: 0deg;
+        }
+    }
+
+    .header-menu {
+        display: none;
+        height: 80px;
+        width: 100%;
+        position: absolute;
+        background-color: white;
+        justify-content: center;
+        top: 80px;
+        left: 0;
+
+        &.header-menu-visible {
+            display: flex;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        height: 60px;
+        padding: 0 16px;
+    }
+    .header-logo {
+        img {
+            width: 32px;
+        }
+
+        p {
+            font-size: 2.4rem;
+        }
+    }
+
+    .header-menu {
+        gap: 20px;
+        top: 60px;
+
+        li {
+            a {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    .header-login-cart {
+        gap: 20px;
+
+        button {
+            padding: 4px 8px;
+            font-size: 1.4rem;
+            min-width: 80px;
+        }
+    }
+
+    .header-login-cart-item {
+        img {
+            width: 28px;
+        }
+    }
+
+    .header-login-cart-count {
+        position: absolute;
+        top: -6px;
+        right: -10px;
+        min-width: 18px;
+        height: 19px;
+        padding: 0 2px;
+        font-size: 1.2rem;
+        border-radius: 11px;
     }
 }
